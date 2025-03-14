@@ -1,0 +1,395 @@
+:root {
+    --primary-red: #D73427;   
+    --primary-green: #1D8C3B;
+    --primary-white: #FFFFFF;  
+    --accent-yellow: #F2BC3D;  
+    --text-dark: #333333;    
+    --text-light: #FFFFFF;   
+    --bg-light: #F9F5F0;     
+    --bg-dark: #2B2B2B;     
+    --pizza-crust: #F2D0A4; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #C12717;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-red);
+    padding: 10px 20px;
+    border: 2px solid var(--primary-red);
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-red);
+    color: var(--text-light);
+}
+
+header {
+    background-color: var(--primary-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-container h1 {
+    font-size: 1.8rem;
+    color: var(--primary-red);
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 1.1rem; 
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-red);
+    color: var(--text-light); 
+}
+
+nav ul li a.active {
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    border-radius: 5px;
+}
+
+/* Sección del Menú */
+#menu {
+    padding: 4rem 2rem; /* Espaciado interno */
+    background-color: var(--bg-light); /* Fondo claro */
+}
+
+#menu h2 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+}
+
+.pizza-cards {
+    display: flex;
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pizza-card {
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: transform 0.3s; /* Añadir transición para el efecto hover */
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.pizza-card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen y recorta si es necesario */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.pizza-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+.pizza-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-green);
+    margin: 1rem 0; /* Espacio alrededor del precio */
+}
+
+/* Estilo para el botón "Agregar al Carrito" */
+.btn-add {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #C12717; /* Color al pasar el mouse */
+}
+
+/* Contador de cantidad */
+.cantidad {
+    margin-top: 10px; /* Espacio encima del contador de cantidad */
+    font-size: 1rem; /* Tamaño de fuente para el contador */
+}
+
+/* Estilos para el Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo blanco */
+    margin: 15% auto; /* Margen superior e inferior */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde */
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+}
+
+.close-btn {
+    color: #aaa; /* Color del botón de cerrar */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño del botón de cerrar */
+    font-weight: bold; /* Negrita */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black; /* Color al pasar el mouse */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambiar cursor */
+}
+
+#newsletter {
+    background-color: var(--accent-yellow);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.newsletter-content h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.newsletter-form input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    width: 300px;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-small {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--accent-yellow);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    .historia-content {
+        flex-direction: column;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        max-width: 300px;
+    }
+}
