@@ -1,17 +1,15 @@
-/* Colores principales de la marca - Inspirados en los colores de Italia */
 :root {
-    --primary-red: #D73427;     /* Rojo intenso para llamar la atención */
-    --primary-green: #1D8C3B;   /* Verde italiano */
-    --primary-white: #FFFFFF;   /* Blanco */
-    --accent-yellow: #F2BC3D;   /* Amarillo cálido */
-    --text-dark: #333333;       /* Para texto principal */
-    --text-light: #FFFFFF;      /* Para texto sobre fondos oscuros */
-    --bg-light: #F9F5F0;        /* Fondo claro cremoso */
-    --bg-dark: #2B2B2B;         /* Fondo oscuro para contraste */
-    --pizza-crust: #F2D0A4;     /* Color masa de pizza */
+    --primary-red: #D73427;   
+    --primary-green: #1D8C3B;
+    --primary-white: #FFFFFF;  
+    --accent-yellow: #F2BC3D;  
+    --text-dark: #333333;    
+    --text-light: #FFFFFF;   
+    --bg-light: #F9F5F0;     
+    --bg-dark: #2B2B2B;     
+    --pizza-crust: #F2D0A4; 
 }
 
-/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -67,7 +65,6 @@ section {
     color: var(--text-light);
 }
 
-/* Header y navegación */
 header {
     background-color: var(--primary-white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -114,38 +111,38 @@ nav ul li a {
     position: relative;
     transition: all 0.3s ease;
     font-size: 1.1rem; 
-    font-size: 1.1rem; /* Tamaño de fuente mejorado */
-    padding: 0.5rem 0.75rem; /* Espaciado mejorado */
-    border-radius: 5px; /* Bordes redondeados para un mejor aspecto */
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    background-color: var(--primary-red); /* Fondo rojo al pasar el mouse */
-    color: var(--text-light); /* Cambia el color del texto al pasar el mouse */
+    background-color: var(--primary-red);
+    color: var(--text-light); 
 }
 
 nav ul li a.active {
-    background-color: var(--primary-red); /* Fondo rojo para el elemento activo */
-    color: var(--text-light); /* Color del texto para el elemento activo */
-    border-radius: 5px; /* Bordes redondeados para el elemento activo */
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    border-radius: 5px;
 }
 
 #hero {
-    background-image: url('../images/fondoPrincipal.jpg'); /* Reemplaza con la ruta de tu imagen */
-    background-size: cover; /* Asegura que la imagen cubra todo el área */
-    background-position: center; /* Centra la imagen */
-    height: 80vh; /* Altura de la sección igual a la altura de la ventana */
-    display: flex; /* Para centrar el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    color: white; /* Cambia el color del texto si es necesario */
-    text-align: center; /* Centra el texto */
+    background-image: url('../images/fondoPrincipal.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px; 
 }
 
 .hero-content p {
@@ -154,10 +151,10 @@ nav ul li a.active {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Sección Especialidades */
 #especialidades {
     text-align: center;
     background-color: var(--primary-white);
+    padding: 4rem 2rem; /* Añadir espaciado interno */
 }
 
 #especialidades h2 {
@@ -167,9 +164,10 @@ nav ul li a.active {
 
 .pizza-cards {
     display: flex;
-    gap: 20px;
+    gap: 60px; /* Espacio entre las tarjetas */
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 2rem; /* Espacio debajo de las tarjetas */
 }
 
 .pizza-card {
@@ -179,6 +177,11 @@ nav ul li a.active {
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+    transition: transform 0.3s; /* Añadir transición para el efecto hover */
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
 }
 
 .pizza-card img {
@@ -196,16 +199,32 @@ nav ul li a.active {
     color: #555;
 }
 
-
 .price {
     display: block;
     font-size: 1.3rem;
     font-weight: bold;
     color: var(--primary-green);
-    padding: 0.5rem 1rem 1.5rem;
+    margin: 1rem 0; /* Añadir margen para separar el precio del texto */
 }
 
-/* Sección Historia */
+/* Estilo para el botón */
+.btn-secondary {
+    margin-top: 1rem; /* Espacio encima del botón */
+    padding: 12px 24px; /* Ajustar el tamaño del botón */
+    border-radius: 50px; /* Bordes redondeados */
+    background-color: transparent;
+    color: var(--primary-red);
+    border: 2px solid var(--primary-red);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-red);
+    color: var(--text-light);
+}
+
 #historia {
     background-color: var(--bg-light);
 }
@@ -233,7 +252,6 @@ nav ul li a.active {
     height: auto;
 }
 
-/* Sección Testimonios */
 #testimonios {
     background-color: var(--primary-green);
     color: var(--text-light);
@@ -269,7 +287,6 @@ nav ul li a.active {
     display: block;
 }
 
-/* Sección Ubicación */
 #ubicacion {
     background-color: var(--primary-white);
     text-align: center;
@@ -312,7 +329,6 @@ nav ul li a.active {
     margin-bottom: 0.5rem;
 }
 
-/* Sección Newsletter */
 #newsletter {
     background-color: var(--accent-yellow);
     text-align: center;
@@ -340,7 +356,6 @@ nav ul li a.active {
     font-size: 1rem;
 }
 
-/* Footer */
 footer {
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -426,7 +441,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -462,89 +476,4 @@ footer {
         width: 100%;
         max-width: 300px;
     }
-}
-
-/* Menú de pizzas - Overlay */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s;
-}
-
-.menu-overlay.show {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Contenedor del menú */
-.menu-content {
-    background: var(--primary-white);
-    padding: 2rem;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Botón de cierre */
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--primary-red);
-    cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-/* Lista de pizzas */
-.pizza-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-/* Tarjetas de pizza */
-.pizza-item {
-    background: var(--bg-light);
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.pizza-item img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 10px;
-}
-
-.pizza-item h3 {
-    color: var(--primary-red);
-    margin-top: 0.5rem;
-}
-
-.pizza-item p {
-    font-size: 0.9rem;
-    color: var(--text-dark);
-}
-
-.pizza-item .price {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--primary-green);
-    margin-top: 0.5rem;
 }
