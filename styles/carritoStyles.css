@@ -127,9 +127,6 @@ nav ul li a.active {
     border-radius: 5px;
 }
 
-
-
-/* Sección de carrito */
 #carrito {
     max-width: 1200px;
     margin: 30px auto;
@@ -340,7 +337,6 @@ nav ul li a.active {
     background-color: #e0e0e0;
 }
 
-/* Modal */
 .modal {
     display: none;
     position: fixed;

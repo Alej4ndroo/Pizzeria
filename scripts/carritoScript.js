@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const emptyCartMessage = document.querySelector(".empty-cart-message");
     const checkoutButton = document.getElementById("btn-checkout");
     const seguirComprandoButton = document.getElementById("btn-seguir-comprando");
-    const modal = document.getElementById("modal");
-    const closeModalBtn = document.querySelector(".close-btn");
+    const modalConfirmacion = document.getElementById("modal-confirmacion");
+    const modalNoDisponible = document.getElementById("modal-no-disponible");
+    const closeModalBtns = document.querySelectorAll(".close-btn");
 
     // Obtener carrito del localStorage
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -171,8 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem('pizzasInventario', JSON.stringify(pizzasInventario));
                 actualizarCarrito();
             } else {
-                // Mostrar mensaje de no disponibilidad
-                alert("Lo sentimos, no hay más unidades disponibles de esta pizza.");
+                // Mostrar modal de no disponibilidad
+                showModalNoDisponible();
             }
         }
     }
@@ -207,22 +208,39 @@ document.addEventListener("DOMContentLoaded", () => {
         carrito = [];
         
         // Mostrar modal de confirmación
-        modal.style.display = 'block';
+        showModalConfirmacion();
     });
 
-    // Cerrar el modal
-    closeModalBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-        // Redirigir a la página de inicio
-        window.location.href = 'index.html';
+    // Función para mostrar el modal de confirmación
+    function showModalConfirmacion() {
+        modalConfirmacion.style.display = 'block'; // Mostrar el modal de confirmación
+    }
+
+    // Función para mostrar el modal de no disponibilidad
+    function showModalNoDisponible() {
+        modalNoDisponible.style.display = 'block'; // Mostrar el modal de no disponibilidad
+    }
+
+    // Cerrar los modales
+    closeModalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modalConfirmacion.style.display = 'none';
+            modalNoDisponible.style.display = 'none';
+            // Redirigir a la página de inicio si se cierra el modal de confirmación
+            if (btn.closest('#modal-confirmacion')) {
+                window.location.href = 'index.html';
+            }
+        });
     });
 
     // Cerrar el modal si se hace clic fuera del contenido
     window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-            // Redirigir a la página de inicio
+        if (event.target === modalConfirmacion) {
+            modalConfirmacion.style.display = 'none';
             window.location.href = 'index.html';
+        }
+        if (event.target === modalNoDisponible) {
+            modalNoDisponible.style.display = 'none';
         }
     });
 

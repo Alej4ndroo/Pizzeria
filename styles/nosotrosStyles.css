@@ -152,6 +152,7 @@ nav ul li a.active {
     width: 100%;
     height: auto;
     max-width: 500px;
+    border-radius: 40px;
 }
 
 /* Misión, visión y valores */
@@ -222,7 +223,8 @@ nav ul li a.active {
 
 .miembro-equipo img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     border-radius: 50%;
 }
 
