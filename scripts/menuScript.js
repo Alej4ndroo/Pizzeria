@@ -193,4 +193,11 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.style.display = "none"; // Ocultar el modal
         }
     });
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
 });
