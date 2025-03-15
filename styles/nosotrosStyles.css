@@ -422,6 +422,20 @@ footer {
 }
 
 @media (max-width: 768px) {
+    #mision-vision h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+
+    .mision-vision-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .mision-box, .vision-box, .valores-box {
+        width: 100%; /* Asegura que ocupen el 100% del ancho */
+        max-width: 400px; /* Limita el ancho máximo para que no sean demasiado grandes */
+    }
+    
     .logo {
         width: 20%;
     }

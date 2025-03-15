@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "descripcion": "Mozzarella, gorgonzola, parmesano y queso de cabra",
             "precio": "$13.99",
             "precioNumerico": 13.99,
-            "imagen": "../images/cuatroquesos.png",
+            "imagen": "../images/quesos.png",
             "cantidad": 4 // Cantidad inicial
         },
         {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "descripcion": "Pollo a la BBQ, mozzarella y cebolla morada",
             "precio": "$14.99",
             "precioNumerico": 14.99,
-            "imagen": "../images/bbqchicken.png",
+            "imagen": "../images/chicken.png",
             "cantidad": 1 // Cantidad inicial
         },
         {
