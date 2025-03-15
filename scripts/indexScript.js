@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "nombre": "Cuatro Quesos",
             "descripcion": "Mozzarella, gorgonzola, parmesano y queso de cabra",
             "precio": "$13.99",
-            "imagen": "../images/cuatroquesos.png",
+            "imagen": "../images/quesos.png",
             "cantidad": 0
         },
         {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "nombre": "BBQ Chicken",
             "descripcion": "Pollo a la BBQ, mozzarella y cebolla morada",
             "precio": "$14.99",
-            "imagen": "../images/bbqchicken.png",
+            "imagen": "../images/chicken.png",
             "cantidad": 0
         },
         {
